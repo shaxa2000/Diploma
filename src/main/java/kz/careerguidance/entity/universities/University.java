@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.Hibernate;
 
@@ -17,6 +18,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @ToString
 @Getter
+@Setter
 public class University {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

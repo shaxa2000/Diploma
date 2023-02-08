@@ -16,24 +16,53 @@ import java.util.Objects;
 
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 @Getter
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Person {
+
+    public Person(String name, String roles) {
+        this.name = name;
+        this.roles = roles;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-    private Roles roles;
+    private String roles;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return Objects.equals(id, person.id) && Objects.equals(name, person.name) && roles == person.roles;
+        return Objects.equals(id, person.id) && Objects.equals(name, person.name) && Objects.equals(roles, person.roles);
     }
 
     @Override
