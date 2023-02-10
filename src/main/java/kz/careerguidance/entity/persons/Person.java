@@ -6,9 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
-import kz.careerguidance.role.Roles;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -17,7 +14,6 @@ import java.util.Objects;
 @Entity
 @NoArgsConstructor
 @ToString
-@Getter
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Person {
 
