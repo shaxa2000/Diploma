@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @RequiredArgsConstructor
 public class CareerGuidanceApplication {
 	private final PersonService personService;
-	private Roles roles;
 
 	public static void main(String[] args) {
 		SpringApplication.run(CareerGuidanceApplication.class, args);
